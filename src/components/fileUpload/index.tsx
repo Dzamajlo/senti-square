@@ -43,7 +43,7 @@ export const FileUploadForm = () => {
 
   return (
     <Card>
-      <Card.Header as='h5'>1. Import Data</Card.Header>
+      <Card.Header as='h5'>1. Importovať Dáta</Card.Header>
 
       <Card.Body>
         <Form onSubmit={onSubmit}>

@@ -9,7 +9,7 @@ export const TextView = () => {
 
   return (
     <Card>
-      <Card.Header as='h5'>2. Processed Texts with Entities</Card.Header>
+      <Card.Header as='h5'>2. Spracované Texty s Entitami</Card.Header>
 
       <Card.Body>
         {textRazorResponseList.length ? (
