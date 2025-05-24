@@ -13,9 +13,9 @@ export const TextView = () => {
 
       <Card.Body>
         {textRazorResponseList.length ? (
-          textRazorResponseList.map((item) => (
+          textRazorResponseList.map((item, index) => (
             <TextRazorListItem
-              key={`text-razor-list-item-${item.response?.entities[0]?.id}`}
+              key={`text-razor-list-item-${index}-${item.response?.entities?.[0]?.id ?? 'no-entities'}`}
               {...item}
             />
           ))

@@ -15,15 +15,16 @@ export const useGetEntityTypeFrequencyData =
       if (!textRazorResponseList.length) return [];
 
       const typeCounts: Record<string, number> = {};
-      for (const {
-        response: { entities },
-      } of textRazorResponseList) {
-        for (const entity of entities) {
-          if (entity.type?.length) {
-            for (const individualType of entity.type) {
-              if (individualType?.trim() !== '')
-                typeCounts[individualType] =
-                  (typeCounts[individualType] || 0) + 1;
+      for (const textRazorItem of textRazorResponseList) {
+        const entities = textRazorItem?.response?.entities;
+        if (Array.isArray(entities)) {
+          for (const entity of entities) {
+            if (entity.type?.length) {
+              for (const individualType of entity.type) {
+                if (individualType?.trim() !== '')
+                  typeCounts[individualType] =
+                    (typeCounts[individualType] || 0) + 1;
+              }
             }
           }
         }
