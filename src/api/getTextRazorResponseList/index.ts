@@ -1,4 +1,3 @@
-import { MAX_LINES_TO_PROCESS } from '@/api/constants';
 import type {
   TextRazorApiResponse,
   TextRazorSuccessApiResponse,
@@ -15,7 +14,8 @@ export const getTextRazorResponseList = async (
 ): Promise<Array<TextRazorSuccessApiResponse>> => {
   if (!listOfSentences.length) return [];
 
-  const sentences2Process = listOfSentences.slice(0, MAX_LINES_TO_PROCESS);
+  // const sentences2Process = listOfSentences.slice(0, MAX_LINES_TO_PROCESS);
+  const sentences2Process = listOfSentences;
   const textRazorResponseList: TextRazorSuccessApiResponse[] = [];
 
   for (const sentence of sentences2Process) {

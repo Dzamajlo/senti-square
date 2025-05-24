@@ -15,7 +15,7 @@ export const PieChart = ({
 }: {
   entityTypeFrequencyData: Array<EntityTypeFrequencyData>;
 }) => (
-  <ResponsiveContainer width='100%' height={300}>
+  <ResponsiveContainer width='100%' height={400}>
     <RechartsPieChart>
       <Pie
         cx='50%'
