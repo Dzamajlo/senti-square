@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Use pnpm dlx for running commitlint and pass the argument correctly
+pnpm dlx commitlint --edit "$1"

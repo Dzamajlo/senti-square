@@ -1,0 +1,17 @@
+export const COLORS: ReadonlyArray<`#${string}`> = [
+  '#0088FE',
+  '#00C49F',
+  '#FFBB28',
+  '#FF8042',
+  '#8884D8',
+  '#82CaDD',
+  '#FF5733',
+  '#C70039',
+  '#A569BD',
+  '#5DADE2',
+  '#58D68D',
+  '#F4D03F',
+  '#DC7633',
+  '#AAB7B8',
+  '#F1948A',
+];
