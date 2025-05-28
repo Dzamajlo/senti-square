@@ -14,10 +14,13 @@ export const TextView = () => {
       <Card.Body>
         {textRazorResponseList.length ? (
           textRazorResponseList.map((item, index) => (
-            <TextRazorListItem
-              key={`text-razor-list-item-${index}-${item.response?.entities?.[0]?.id ?? 'no-entities'}`}
-              {...item}
-            />
+            <>
+              <TextRazorListItem
+                key={`text-razor-list-item-${index}-${item.response?.entities?.[0]?.id ?? 'no-entities'}`}
+                {...item}
+              />
+              {index < textRazorResponseList.length - 1 && <hr />}
+            </>
           ))
         ) : (
           <p>Žiadne dáta na zobrazenie. Nahrajte a spracujte súbor.</p>

@@ -16,7 +16,7 @@ export const TextRazorListItem = (textRazorListItem: ITextRazorListItem) => {
       {Boolean(textRazorListItem.response?.entities?.length) && (
         <>
           <p className='mb-1' style={{ fontSize: '0.9em' }}>
-            <strong>(Debug Info) Nájdené entity:</strong>
+            <strong>Nájdené entity:</strong>
           </p>
 
           <ul
@@ -39,7 +39,7 @@ export const TextRazorListItem = (textRazorListItem: ITextRazorListItem) => {
 
       {!textRazorListItem.response?.entities?.length && (
         <p style={{ fontStyle: 'italic', fontSize: '0.9em' }}>
-          Pre tento text neboli nájdené žiadne entity (podľa API).
+          Pre tento text neboli nájdené žiadne entity.
         </p>
       )}
     </div>
